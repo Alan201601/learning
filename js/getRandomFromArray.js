@@ -11,7 +11,7 @@ function getRandomFromArray(arr,num){
     }
     return result;
 }
-console.log(getRandomFromArray([1,2,3,4,5,6,7,8,9,10,11,12,13],4));
+//console.log(getRandomFromArray([1,2,3,4,5,6,7,8,9,10,11,12,13],4));
 function getRandomFromArray1(arr,num){
     if(num > arr.length) return;
     var result  = [];
@@ -22,4 +22,30 @@ function getRandomFromArray1(arr,num){
     }
     return result;
 }
-console.log(getRandomFromArray1([1,2,3,4,5,6,7,8,9,10,11,12,13],4));
+//console.log(getRandomFromArray1([1,2,3,4,5,6,7,8,9,10,11,12,13],4));
+
+
+function getrandomFromArr(arr,num){
+    if(num > arr.length) return;
+    var result = [];
+    for(var i = 0; i < num; i++){
+        var ran = Math.floor(Math.random()*arr.length);
+        result.push(arr[ran]);
+        arr.splice(ran,1);
+    }
+    return result;
+
+}
+//console.log(getrandomFromArr([2,3,4,5,6],3));
+
+function aa(arr,num){
+    if(num > arr.length) return;
+    var  result = [];
+    for(var i = 0 ; i < num; i++){
+        var ran = Math.floor(Math.random()*arr.length);
+        result.push(arr[ran]);
+        arr.splice(ran,1);
+    }
+    return result;
+}
+console.log(aa([1,2,3,4,5,6,7],4));
